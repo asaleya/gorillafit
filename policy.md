@@ -1,3 +1,6 @@
+---
+permalink: /policy.html
+---
 
     <h2>Privacy Policy</h2> <p>
                     Amr Saleh built the Diet Challenge app as
