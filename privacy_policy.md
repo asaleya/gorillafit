@@ -1,7 +1,7 @@
 
 ## Privacy Policy
 
-    Amr Saleh built the Diet Challenge app as
+    Gorilla Fit is developed by Diet Challenge, Inc. as
     a Free app. This SERVICE is provided by
     Amr Saleh at no cost and is intended for
     use as is.
