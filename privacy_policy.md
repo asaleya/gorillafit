@@ -1,8 +1,7 @@
 
 ## Privacy Policy
 
-    Gorilla Fit is developed by Diet Challenge, Inc. as
-    a Free app.
+    Gorilla Fit is developed by Diet Challenge, Inc. as a Free app. This service is provided by Gorilla Fit at no cost and is intended for use as is, with other paid services.
 
     This page is used to inform visitors regarding
     my policies with the collection, use, and
