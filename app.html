@@ -2,7 +2,6 @@
 <body>
 test
 <script>
-console.log('detecting device..')
  /**
  * Determine the mobile operating system.
  * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
@@ -28,7 +27,9 @@ function getMobileOperatingSystem() {
 
     return "unknown";
 }  
-  
+
+console.log('detecting device..')
+document.write("detecting device..")
 var platform = getMobileOperatingSystem()
 if(platform == "Windows Phone") document.write("sorry, diet challenge app currently doesn't support windows phones")
 if(platform == "Android") window.open("https://play.google.com/store/apps/details?id=net.fitgorillas.app&hl=en_AU")
