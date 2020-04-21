@@ -1,8 +1,4 @@
-<div id="text">ssss</div>
- 
-<script>
-document.getElementById("text").innerHTML = "Text added by JavaScript code";
-</script>
+<div id="text">detecting device..</div>
 
 <script>
  /**
@@ -32,7 +28,8 @@ function getMobileOperatingSystem() {
 }  
 
 var platform = getMobileOperatingSystem()
-if(platform == "Windows Phone") document.write("sorry, diet challenge app currently doesn't support windows phones")
+if(platform == "Windows Phone") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support windows phones"
 if(platform == "Android") window.location = "https://play.google.com/store/apps/details?id=com.dietchallenge"
-if(platform == "iOS") document.write("sorry, diet challenge app currently doesn't support IOS")
+if(platform == "iOS") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support IOS"
+document.getElementById("text").innerHTML = 'page has been loaded successfully'
 </script>
