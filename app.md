@@ -30,16 +30,16 @@ function getMobileOperatingSystem() {
 
 var platform = getMobileOperatingSystem()
 if(platform == "Windows Phone") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support windows phones"
-if(platform == "Android" || platform == "iOS" || platform == "unknown") {
+if(platform == "Android") {
   //window.location = "https://play.google.com/store/apps/details?id=com.dietchallenge"
-    // Then somewhere in your code
-  new jsFileDownloader({ url: 'http://gorilla.fitness/gorillaFit.apk' })
+ window.location = "http://gorilla.fitness/gorillaFit.apk"
+  /*new jsFileDownloader({ url: 'http://gorilla.fitness/gorillaFit.apk' })
     .then(function () {
       // Called when download ended
     })
     .catch(function (error) {
       // Called when an error occurred
-    });
+    });*/
 }
 if(platform == "iOS") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support IOS"
 document.getElementById("text").innerHTML = 'page has been loaded successfully'
