@@ -1,5 +1,4 @@
-<html>
-<body>
+
 <script>
  /**
  * Determine the mobile operating system.
@@ -32,5 +31,3 @@ if(platform == "Windows Phone") document.write("sorry, diet challenge app curren
 if(platform == "Android") window.location = "https://play.google.com/store/apps/details?id=com.dietchallenge"
 if(platform == "iOS") document.write("sorry, diet challenge app currently doesn't support IOS")
 </script>
-</body>
-</html>
