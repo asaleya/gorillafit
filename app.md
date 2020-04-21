@@ -31,8 +31,8 @@ function getMobileOperatingSystem() {
 var platform = getMobileOperatingSystem()
 if(platform == "Windows Phone") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support windows phones"
 if(platform == "Android") {
-  //window.location = "https://play.google.com/store/apps/details?id=com.dietchallenge"
- window.location = "http://gorilla.fitness/gorillaFit.apk"
+  window.location = "https://play.google.com/store/apps/details?id=com.dietchallenge"
+  //window.location = "http://gorilla.fitness/gorillaFit.apk"
   /*new jsFileDownloader({ url: 'http://gorilla.fitness/gorillaFit.apk' })
     .then(function () {
       // Called when download ended
