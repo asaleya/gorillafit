@@ -1,3 +1,8 @@
+<div id="text">ssss</div>
+ 
+<script>
+document.getElementById("text").innerHTML = "Text added by JavaScript code";
+</script>
 
 <script>
  /**
