@@ -113,13 +113,15 @@ var store = function(){
  window.open("https://play.google.com/store/apps/details?id=com.dietchallenge")
 }
 var download = function(){
- new jsFileDownloader({ url: 'http://gorilla.fitness/gorillaFit.apk' })
+ 
+  window.location = "http://gorilla.fitness/gorillaFit.apk"
+ /*new jsFileDownloader({ url: 'http://gorilla.fitness/gorillaFit.apk' })
     .then(function () {
       // Called when download ended
     })
     .catch(function (error) {
       // Called when an error occurred
-    });
+    });*/
 }
 var googleplay = function(){
  
