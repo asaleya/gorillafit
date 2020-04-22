@@ -7,7 +7,8 @@ body{
     padding-top: 7em;
    }
    #logo{
-    width: 100px;
+    width: 50%;
+    max-width: 500px;
    }
    #download{
     font: status-bar;
@@ -18,7 +19,8 @@ body{
     color: #464646;
    }
    #google-play{
-    width: 100px;
+    width: 50%;
+    max-width: 500px;
    }
    button{
     background: rgb(224, 194, 112);
@@ -66,14 +68,14 @@ var download = function(){
 }
 var platform = getMobileOperatingSystem()
 if(platform == "Windows Phone") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support windows phones"
+if(platform == "iOS") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support IOS"
 if(platform == "Android" || true) {
   //window.location = "https://play.google.com/store/apps/details?id=com.dietchallenge"
   //window.location = "http://gorilla.fitness/gorillaFit.apk"
  
-  document.getElementById("text").innerHTML = '<div id="download" onclick="download">download latest app</div>'
-  document.getElementById("text").innerHTML += '<img id="google-play" src="google-play-badge.png">'
+  document.getElementById("text").innerHTML = '<br><br><div id="download" onclick="download">download latest app</div>'
+  document.getElementById("text").innerHTML += '<br><img id="google-play" src="google-play-badge.png">'
 }
-if(platform == "iOS") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support IOS"
 </script>
 
 </body>
