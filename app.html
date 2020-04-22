@@ -13,19 +13,19 @@ body{
    #download{        
     margin-top: 10%;
     font: status-bar;
-    font-size: 2.7vw;
+    font-size: 3vw;
     background: rgb(224, 194, 112);
-    padding: 2%;
+    padding: 5%;
     border-radius: 5px;
     display: inline-block;
     color: #000;
     box-sizing: border-box;
-    width: 35%;
+        width: 60%;
     max-width: 440px;
     cursor: pointer;
    }
    #google-play{
-    width: 40%;
+        width: 70%;
     max-width: 500px;
     cursor: pointer;
    }
@@ -38,7 +38,7 @@ body{
     font-family: monospace;
    }
    #note p{
-    font-size: 1.5em;
+    font-size: 2em;
    }
    #note-store{
     font: status-bar;
@@ -124,7 +124,7 @@ if(platform == "Android" || true) {
   //window.location = "https://play.google.com/store/apps/details?id=com.dietchallenge"
   //window.location = "http://gorilla.fitness/gorillaFit.apk"
  
-  document.getElementById("text").innerHTML = '<br><br><div id="download" onclick="javascript:download();">download latest app</div>'
+  document.getElementById("text").innerHTML = '<br><br><div id="download" onclick="javascript:download();">Download latest app</div>'
   document.getElementById("text").innerHTML += '<br><img id="google-play" onclick="javascript:googleplay();" src="google-play-badge.png">'
 }
 </script>
