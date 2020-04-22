@@ -4,12 +4,16 @@
 body{
    background: #000;
    }
+   logo{
+    
+   }
    button{
     background: rgb(224, 194, 112);
    }
 </style>
  </head>
 <body>
+<img id="logo" src="./Logo splash png.png">
 <div id="text">detecting device..</div>
 <script src="./js-file-downloader.min.js"></script>
 <script>
@@ -54,6 +58,7 @@ if(platform == "Android") {
   //window.location = "http://gorilla.fitness/gorillaFit.apk"
  
   document.getElementById("text").innerHTML = '<div onclick="download">download latest app</div>'
+  document.getElementById("text").innerHTML += '<img src="google-play-badge.png">'
 }
 if(platform == "iOS") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support IOS"
 document.getElementById("text").innerHTML = 'page has been loaded successfully'
