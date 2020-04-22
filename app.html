@@ -4,29 +4,27 @@
 body{
    background: #000;
  text-align: center;
-    padding-top: 7em;
+    padding: 0;
+    margin: 0;
+   }
+   img{
+    max-width: 100%;
    }
    #logo{
-    width: 40%;
-    max-width: 500px;
-   }
-   #download{        
     margin-top: 10%;
-    font: status-bar;
-    font-size: 3vh;
-    background: rgb(224, 194, 112);
-    padding: 3%;
-    border-radius: 5px;
-    display: inline-block;
-    color: #000;
-    box-sizing: border-box;
+    width: 40%;
+    max-width: 200px;
+   }
+   #download {
+    margin-top: 10%;
+    margin-bottom: 5%;
         width: 60%;
-    max-width: 440px;
+    max-width: 300px;
     cursor: pointer;
    }
    #google-play{
-        width: 70%;
-    max-width: 500px;
+        width: 60%;
+    max-width: 300px;
     cursor: pointer;
    }
    #note{
@@ -40,29 +38,32 @@ body{
    #note p{
     font-size: 2em;
    }
-   #note-store{
-    font: status-bar;
-    font-size: 2.7vw;
-    background: white;
-    padding: 1.7vw;
-    border-radius: 2px;
-    display: inline-block;
-    color: #000;
-    cursor: pointer;
-    border: 2px solid #000;
+   #note #note-action{
+    display: flex;
+    justify-content: center;
+    max-width: 711px;
+        margin: 0 auto;
+   }
+   #note-store-container{
     margin: 2%;
+    margin-left: 15px;
+  display: inline-block;  
+  text-align: left; 
+   }
+   #note-store{
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 5px;
+   }
+   #note-download-container{
+    margin: 2%;
+    margin-right: 15px;
+  display: inline-block;  
+  text-align: right; 
    }
    #note-download{
-    font: status-bar;
-    font-size: 2.7vw;
-    background: rgb(224, 194, 112);
-    padding: 1.7vw;
-    border-radius: 2px;
-    display: inline-block;
-    color: #000;
+
     cursor: pointer;
-    border: 2px solid rgb(224, 194, 112);
-    margin: 2%;
    }
 </style>
  </head>
@@ -110,9 +111,9 @@ var download = function(){
 }
 var googleplay = function(){
  
- document.getElementById("text").innerHTML = '<br><br><div id="note"><p>*Please note that the app might not be available in your country on Google play store as they are taking more time to review apps due to adjusted work schedules at this time.</p></div>'
+ document.getElementById("text").innerHTML = '<br><br><div id="note"><img src="note.png"></div>'
 
- document.getElementById("note").innerHTML += '<div id="note-store" onclick="javascript:store();">Go to Play Store</div><div id="note-download" onclick="javascript:download();">Download app directly</div>'
+ document.getElementById("note").innerHTML += '<div id="note-action"><div id="note-store-container"><img src="note-store.png" id="note-store" onclick="javascript:store();"></div><div id="note-download-container"><img src="note-download.png" id="note-download" onclick="javascript:download();"></div></div>'
 
 }
 
@@ -124,8 +125,8 @@ if(platform == "Android" || true) {
   //window.location = "https://play.google.com/store/apps/details?id=com.dietchallenge"
   //window.location = "http://gorilla.fitness/gorillaFit.apk"
  
-  document.getElementById("text").innerHTML = '<br><br><div id="download" onclick="javascript:download();">Download latest app</div>'
-  document.getElementById("text").innerHTML += '<br><img id="google-play" onclick="javascript:googleplay();" src="google-play-badge.png">'
+  document.getElementById("text").innerHTML = '<br><img id="download" onclick="javascript:download();" src="download.png">'
+  document.getElementById("text").innerHTML += '<br><img id="google-play" onclick="javascript:googleplay();" src="google-play.png">'
 }
 </script>
 
