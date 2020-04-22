@@ -23,6 +23,13 @@ body{
     max-width: 300px;
     cursor: pointer;
    }
+   #apple{
+    margin-top: 5%;
+    margin-bottom: 2%;
+        width: 60%;
+    max-width: 300px;
+    cursor: pointer;
+   }
    #google-play{
         width: 60%;
     max-width: 300px;
@@ -126,11 +133,12 @@ var download = function(){
 var googleplay = function(){
  
  document.getElementById("text").innerHTML = '<br><br><div id="note"><img src="note.png"></div>'
-
  document.getElementById("note").innerHTML += '<div id="note-action"><div id="note-store-container"><img src="note-store.png" id="note-store" onclick="javascript:store();"></div><div id="note-download-container"><img src="note-download.png" id="note-download" onclick="javascript:download();"></div></div>'
 
 }
 
+var openAppleLink = function(){window.open("https://apps.apple.com/eg/app/gorilla-fit/id1498609215");}
+var openAndroidLink = function(){window.open("https://play.google.com/store/apps/details?id=com.dietchallenge");}
 
 var platform = getMobileOperatingSystem()
 if(platform == "Windows Phone") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support windows phones"
@@ -141,6 +149,11 @@ if(platform == "Android") {
  
   document.getElementById("text").innerHTML = '<br><img id="download" onclick="javascript:download();" src="download.png">'
   document.getElementById("text").innerHTML += '<br><img id="google-play" onclick="javascript:googleplay();" src="google-play.png">'
+}
+if(platform == "unknown"){
+
+  document.getElementById("text").innerHTML = '<br><img id="apple" onclick="javascript:openAppleLink();" src="apple.png">'
+  document.getElementById("text").innerHTML += '<br><img id="google-play" onclick="javascript:openAndroidLink();" src="google-play.png">'
 }
 </script>
 
