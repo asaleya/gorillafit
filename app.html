@@ -3,9 +3,19 @@
   <style>
 body{
    background: #000;
+ text-align: center;
+    padding-top: 7em;
    }
    logo{
-    
+    width: 100px;
+   }
+   #download{
+    font: status-bar;
+    background: rgb(224, 194, 112);
+    padding: 10px;
+    border-radius: 3px;
+    display: inline-block;
+    color: #464646;
    }
    button{
     background: rgb(224, 194, 112);
@@ -57,7 +67,7 @@ if(platform == "Android" || platform == "unknown") {
   //window.location = "https://play.google.com/store/apps/details?id=com.dietchallenge"
   //window.location = "http://gorilla.fitness/gorillaFit.apk"
  
-  document.getElementById("text").innerHTML = '<div onclick="download">download latest app</div>'
+  document.getElementById("text").innerHTML = '<div id="download" onclick="download">download latest app</div>'
   document.getElementById("text").innerHTML += '<img src="google-play-badge.png">'
 }
 if(platform == "iOS") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support IOS"
