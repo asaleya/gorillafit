@@ -1,0 +1,161 @@
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+body{
+   background: #000;
+ text-align: center;
+    padding: 0;
+    margin: 0;
+   }
+   img{
+    max-width: 100%;
+   }
+   #logo{
+    margin-top: 10%;
+    width: 40%;
+    max-width: 200px;
+   }
+   #download {
+    margin-top: 10%;
+    margin-bottom: 5%;
+        width: 60%;
+    max-width: 300px;
+    cursor: pointer;
+   }
+   #apple{
+    margin-top: 5%;
+    margin-bottom: 2%;
+        width: 60%;
+    max-width: 300px;
+    cursor: pointer;
+   }
+   #google-play{
+        width: 60%;
+    max-width: 300px;
+    cursor: pointer;
+   }
+   #note{
+        color: black;
+    background: white;
+    border-radius: 1px;
+    padding: 3%;
+    margin: 3%;
+    font-family: monospace;
+   }
+   #note p{
+    font-size: 2em;
+   }
+   #note #note-action{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    max-width: 711px;
+        margin: 0 auto;
+   }
+   #note-store-container{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin: 2%;
+    margin-left: 15px;
+  display: inline-block;  
+  text-align: left; 
+   }
+   #note-store{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px #222;
+   }
+   #note-download-container{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin: 2%;
+    margin-right: 15px;
+  display: inline-block;  
+  text-align: right; 
+   }
+   #note-download{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+   }
+</style>
+ </head>
+<body>
+<img id="logo" src="./Logo splash png.png">
+<div id="text">detecting device..</div>
+<script src="./js-file-downloader.min.js"></script>
+<script>
+ /**
+ * Determine the mobile operating system.
+ * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
+ *
+ * @returns {String}
+ */
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}  
+var store = function(){
+ window.open("https://play.google.com/store/apps/details?id=com.dietchallenge")
+}
+var download = function(){
+ 
+  window.location = "http://gorilla.fitness/gorillaFit.apk"
+ /*new jsFileDownloader({ url: 'http://gorilla.fitness/gorillaFit.apk' })
+    .then(function () {
+      // Called when download ended
+    })
+    .catch(function (error) {
+      // Called when an error occurred
+    });*/
+}
+var googleplay = function(){
+ 
+ document.getElementById("text").innerHTML = '<br><br><div id="note"><img src="note.png"></div>'
+ document.getElementById("note").innerHTML += '<div id="note-action"><div id="note-store-container"><img src="note-store.png" id="note-store" onclick="javascript:store();"></div><div id="note-download-container"><img src="note-download.png" id="note-download" onclick="javascript:download();"></div></div>'
+
+}
+
+var openAppleLink = function(){window.open("https://apps.apple.com/eg/app/gorilla-fit/id1498609215");}
+var openAndroidLink = function(){window.open("https://play.google.com/store/apps/details?id=com.dietchallenge");}
+
+var platform = getMobileOperatingSystem()
+if(platform == "Windows Phone") document.getElementById("text").innerHTML = "sorry, diet challenge app currently doesn't support windows phones"
+if(platform == "iOS") window.location = "https://apps.apple.com/eg/app/gorilla-fit/id1498609215"
+if(platform == "Android") {
+  //window.location = "https://play.google.com/store/apps/details?id=com.dietchallenge"
+  //window.location = "http://gorilla.fitness/gorillaFit.apk"
+ 
+  document.getElementById("text").innerHTML = '<br><img id="download" onclick="javascript:download();" src="download.png">'
+  document.getElementById("text").innerHTML += '<br><img id="google-play" onclick="javascript:googleplay();" src="google-play.png">'
+}
+if(platform == "unknown"){
+
+  document.getElementById("text").innerHTML = '<br><img id="apple" onclick="javascript:openAppleLink();" src="apple.png">'
+  document.getElementById("text").innerHTML += '<br><img id="google-play" onclick="javascript:openAndroidLink();" src="google-play.png">'
+}
+</script>
+
+</body>
+</html>
