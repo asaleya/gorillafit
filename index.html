@@ -114,7 +114,8 @@ function getMobileOperatingSystem() {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         return "iOS";
     }
-
+var deviceID = MediaDeviceInfo.deviceId
+alert(deviceID)
     return "unknown";
 }  
 var store = function(){
